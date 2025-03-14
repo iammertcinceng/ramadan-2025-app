@@ -13,6 +13,8 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'gear': 'settings',
+  'calendar': 'calendar-month',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
@@ -39,5 +41,7 @@ export function IconSymbol({
   style?: StyleProp<ViewStyle>;
   weight?: SymbolWeight;
 }) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  // Varsayılan olarak 'help-outline' ikonunu kullan eğer eşleşme bulunamazsa
+  const iconName = MAPPING[name] || 'help-outline';
+  return <MaterialIcons color={color} size={size} name={iconName} style={''} />;
 }

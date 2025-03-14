@@ -1,41 +1,53 @@
 {
   "expo": {
-    "name": "ramazan-vakti-25",
-    "slug": "ramazan-vakti-25",
+    "name": "Ramazan Vakti",
+    "slug": "ramazan-vakti",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/iftar-vakitleri-logo.png",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/iftar-vakitleri-splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/iftar-vakitleri-adaptive.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ramazanvakti.app",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "expo-notifications",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "icon": "./assets/iftar-vakitleri-logo.png",
+          "color": "#ffffff"
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true
+    "extra": {
+      "eas": {
+        "projectId": "bbe43399-d33a-4baf-b1ce-e09862aa6b22"
+      }
+    },
+    "owner": "mertcin",
+    "updates": {
+      "url": "https://u.expo.dev/bbe43399-d33a-4baf-b1ce-e09862aa6b22"
     }
   }
 }
